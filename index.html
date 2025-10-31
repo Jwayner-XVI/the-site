@@ -1,54 +1,132 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
+<html lang="ar" dir="rtl">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <script src="javascr.js"></script>
-
-
-  <meta charset="UTF-8">
-
-  <title>Save Our Planet</title>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>كوكبنا مسؤوليتنا — أنقذ كوكبنا</title>
+  <link rel="stylesheet" href="style.css" />
+  
 </head>
-
 <body>
+  <main class="wrapper">
 
-  <header>
+    <!-- Hero Section -->
+    <section id="hero" class="card hero-card">
+      <h1 class="title">🌍 كوكبنا مسؤوليتنا</h1>
+      <p class="lead">معًا لننشر الوعي حول التلوث.</p>
+      <button id="startBtn" class="primary-btn">هيا بنا</button>
+    </section>
 
-    <h1>🌍 Save Our niggas</h1>
+    <!-- Main Content (hidden initially) -->
+    <div id="mainContent" class="hidden">
 
-    <p>Together we can protect Earth and all its life.</p>
+      <!-- About Section -->
+      <section id="about" class="card">
+        <h2 class="section-title">عن التلوث</h2>
+        <p>
+          يُعد التلوث البيئي من أخطر المشكلات التي تواجه العالم اليوم، حيث يؤثر بشكل مباشر على صحة الإنسان، الحيوانات، والنظام البيئي بأكمله. يحدث التلوث نتيجة للأنشطة البشرية المختلفة التي تؤدي إلى إدخال مواد ضارة إلى البيئة، مما يؤدي إلى اضطراب التوازن الطبيعي للحياة على كوكب الأرض.
+        </p>
+      </section>
 
-  </header>
+      <!-- Quick Quiz Section -->
+      <section id="quiz" class="card">
+        <h2 class="section-title">لنقم بإختبار سريع!</h2>
 
-  <section id="about">
+        <!-- Global Quiz -->
+        <div class="quiz-section">
+          <h3>🌍 للعالم</h3>
 
-    <h2>What is Pollution?</h2>
+          <div class="quiz fade-in">
+            <p>1. كم طناً من البلاستيك يدخل المحيطات سنوياً؟</p>
+            <div class="answers">
+              <button onclick="checkAnswer(this, 'global', 1, false)">10 مليار</button>
+              <button onclick="checkAnswer(this, 'global', 1, true)">15 مليار</button>
+              <button onclick="checkAnswer(this, 'global', 1, false)">25 مليار</button>
+            </div>
+            <div id="global-1" class="result"></div>
+          </div>
 
-    <p>Pollution is the introduction of harmful substances into the environment. Each year, millions of tons of plastic, chemicals, and waste harm the oceans, air, and land.</p>
+          <div class="quiz fade-in">
+            <p>2. كم تبلغ نسبة المياه العذبة الصالحة للشرب من إجمالي مياه الأرض؟</p>
+            <div class="answers">
+              <button onclick="checkAnswer(this, 'global', 2, false)">1%</button>
+              <button onclick="checkAnswer(this, 'global', 2, true)">2.5%</button>
+              <button onclick="checkAnswer(this, 'global', 2, false)">5%</button>
+            </div>
+            <div id="global-2" class="result"></div>
+          </div>
 
-  </section>
+          <div class="quiz fade-in">
+            <p>3. كم عدد الأشجار التي تُقطع سنوياً على مستوى العالم؟</p>
+            <div class="answers">
+              <button onclick="checkAnswer(this, 'global', 3, false)">20 مليار</button>
+              <button onclick="checkAnswer(this, 'global', 3, true)">15 مليار</button>
+              <button onclick="checkAnswer(this, 'global', 3, false)">5 مليار</button>
+            </div>
+            <div id="global-3" class="result"></div>
+          </div>
 
-  <section id="quiz">
+          <div class="quiz fade-in">
+            <p>4. ما نسبة الهواء الملوث في المدن الكبرى؟</p>
+            <div class="answers">
+              <button onclick="checkAnswer(this, 'global', 4, false)">30%</button>
+              <button onclick="checkAnswer(this, 'global', 4, true)">40%</button>
+              <button onclick="checkAnswer(this, 'global', 4, false)">50%</button>
+            </div>
+            <div id="global-4" class="result"></div>
+          </div>
+        </div>
 
-    <h2>Quick Quiz: Test Your Knowledge</h2>
+        <!-- Tunisia Quiz -->
+        <div class="quiz-section">
+          <h3>🇹🇳 لتونس</h3>
 
-    <p><strong>Question:</strong> How many tons of plastic are dumped into the oceans every year?</p>
+          <div class="quiz fade-in">
+            <p>1. كم يبلغ حجم النفايات التي تنتجها تونس سنوياً؟</p>
+            <div class="answers">
+              <button onclick="checkAnswer(this, 'tunisia', 1, false)">2 طن</button>
+              <button onclick="checkAnswer(this, 'tunisia', 1, true)">2.5 طن</button>
+              <button onclick="checkAnswer(this, 'tunisia', 1, false)">3 طن</button>
+            </div>
+            <div id="tunisia-1" class="result"></div>
+          </div>
 
-    
+          <div class="quiz fade-in">
+            <p>2. ما ترتيب تونس بين دول البحر الأبيض المتوسط من حيث دخول البلاستيك إلى البحر؟</p>
+            <div class="answers">
+              <button onclick="checkAnswer(this, 'tunisia', 2, true)">الثانية</button>
+              <button onclick="checkAnswer(this, 'tunisia', 2, false)">الخامسة</button>
+              <button onclick="checkAnswer(this, 'tunisia', 2, false)">السابعة</button>
+            </div>
+            <div id="tunisia-2" class="result"></div>
+          </div>
 
-    <button onclick="checkAnswer('a')">8 million tons</button>
+          <div class="quiz fade-in">
+            <p>3. ما نسبة النفايات المعاد تدويرها في تونس؟</p>
+            <div class="answers">
+              <button onclick="checkAnswer(this, 'tunisia', 3, false)">5%</button>
+              <button onclick="checkAnswer(this, 'tunisia', 3, true)">10%</button>
+              <button onclick="checkAnswer(this, 'tunisia', 3, false)">20%</button>
+            </div>
+            <div id="tunisia-3" class="result"></div>
+          </div>
+        </div>
+      </section>
 
-    <button onclick="checkAnswer('b')">800 thousand tons</button>
+      <!-- Reflection Section -->
+      <section id="reflection" class="card message-card">
+        <h2 class="section-title"> لنتوقف عن لعب دور الضحية</h2>
+        <p class="reflect">
+          بينما تتفاقم أزمة التلوث يوماً بعد يوم، يصبح من السهل علينا انتظار الحكومات والشركات الكبرى لحل هذه المشكلة. لكن الحقيقة المرة هي أن كوكبنا لم يعد يحتمل الانتظار. التغيير الحقيقي يجب أن ينبع منّا نحن. كل قرار نتخذه، من تقليل استهلاك البلاستيك، إلى ترشيد استخدام الطاقة، وصولاً إلى اختيار وسائل النقل المستدامة، هو بمثابة لبنة في بناء مستقبل أنظف. لننتظر من يغير من أجلنا، بل لنكن نحن ذلك التغيير الذي نطالب به.<br><br>
+          Alors que la crise de la pollution s'aggrave chaque jour, il est facile d'attendre que les gouvernements et les grandes entreprises résolvent le problème. Mais la dure réalité est que notre planète ne peut plus attendre. Le vrai changement doit venir de nous. Chaque décision que nous prenons, de la réduction de l'utilisation du plastique à l'optimisation de la consommation d'énergie, jusqu'au choix de moyens de transport durables, constitue une pierre pour construire un avenir plus propre. Ne restons pas passifs ; soyons ce changement que nous demandons.<br><br>
+          As pollution worsens day by day, it is easy to wait for governments and big companies to solve the problem. But the harsh truth is that our planet can no longer wait. Real change must come from us. Every decision we make, from reducing plastic use, to optimizing energy consumption, to choosing sustainable transportation, is a building block toward a cleaner future. Let us not wait for someone else to change the world — let us be that change ourselves.
+        </p>
+      </section>
 
-    <button onclick="checkAnswer('c')">80 million tons</button>
+    </div>
 
-    <p id="result"></p>
+  </main>
 
-  </section>
-
+  <script src="javascr.js"></script>
 </body>
-
 </html>
